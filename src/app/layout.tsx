@@ -1,8 +1,11 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
 import './globals.css'
-
-const inter = Inter({ subsets: ['latin'] })
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from '@fortawesome/fontawesome-svg-core'
+import { poppins, roboto, rubik } from './fonts'
+import Header from '@/components/header/Header'
+import NavBar from '@/components/navbar/NavBar'
+config.autoAddCss = false
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +18,12 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={poppins.className}>
+      <body>
+        <Header />
+        <NavBar />
+        {children}
+      </body>
     </html>
   )
 }
