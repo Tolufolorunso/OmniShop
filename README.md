@@ -1,4 +1,4 @@
-# The Ecommerce Project
+# The Ecommerce Project: OmniShop Connect
 
 ## Mobile and web applications
 

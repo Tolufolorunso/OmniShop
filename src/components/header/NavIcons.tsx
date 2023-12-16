@@ -27,10 +27,12 @@ function NavIcons() {
                 {i.number}
               </span>
             )}
-            <div className="text-2xl">
+            <div className="text-xl sm:text-2xl">
               <Icon icon={i.icon} />
             </div>
-            <div className="text-xs font-semibold leading-3">{i.text}</div>
+            <div className="text-[10px] sm:text-xs font-semibold leading-3">
+              {i.text}
+            </div>
           </a>
         )
       })}
