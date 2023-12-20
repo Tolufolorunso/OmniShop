@@ -1,10 +1,4 @@
-import {
-  faSearch,
-  faHeart,
-  faShoppingBag,
-  faUser,
-} from '@fortawesome/free-solid-svg-icons'
-import Icon from '../icon/Icon'
+import MobileMenuBar from '../mobile-menubar/MobileMenuBar'
 import NavIcons from './NavIcons'
 import NavSearch from './NavSearch'
 
@@ -17,6 +11,7 @@ function Header() {
         </a>
         <NavSearch />
         <NavIcons />
+        <MobileMenuBar />
       </div>
     </header>
   )

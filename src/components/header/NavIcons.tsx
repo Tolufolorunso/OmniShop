@@ -1,6 +1,7 @@
 import React from 'react'
 import Icon from '../icon/Icon'
 import {
+  faCartShopping,
   faHeart,
   faShoppingBag,
   faUser,
@@ -8,7 +9,7 @@ import {
 
 const data = [
   { text: 'Wish List', icon: faHeart, number: 5 },
-  { text: 'Cart', icon: faShoppingBag, number: 4 },
+  { text: 'Cart', icon: faCartShopping, number: 4 },
   { text: 'Account', icon: faUser, number: null },
 ]
 

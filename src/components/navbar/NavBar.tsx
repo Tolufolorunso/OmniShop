@@ -1,10 +1,14 @@
+'use client'
 import React from 'react'
-import Icon from '../icon/Icon'
+import Icon from '@/components/icon/Icon'
 import { faBars } from '@fortawesome/free-solid-svg-icons'
 import Link from 'next/link'
 import Image from 'next/image'
+import { usePathname } from 'next/navigation'
 
 function NavBar() {
+  const pathname = usePathname()
+  console.log(pathname)
   return (
     <nav className="bg-gray-800 hidden lg:block">
       <div className="container">
@@ -53,32 +57,42 @@ function NavBar() {
             <div className="flex items-center space-x-6 text-base capitalize">
               <Link
                 href="/"
-                className="text-gray-200 hover:text-white transition font-semibold"
+                className={`text-gray-200 hover:text-white transition font-semibold  ${
+                  pathname === '/' ? 'text-primary font-bold' : ''
+                }`}
               >
                 Home
               </Link>
               <Link
-                href="/shop"
-                className="text-gray-200 hover:text-white transition font-semibold"
+                href="/products"
+                className={`text-gray-200 hover:text-white transition font-semibold  ${
+                  pathname === '/products' ? 'text-primary font-bold' : ''
+                }`}
               >
                 Shop
               </Link>
               <Link
                 href="/about"
-                className="text-gray-200 hover:text-white transition font-semibold"
+                className={`text-gray-200 hover:text-white transition font-semibold  ${
+                  pathname === '/about' ? 'text-primary font-bold' : ''
+                }`}
               >
                 About Us
               </Link>
               <Link
                 href="/contact"
-                className="text-gray-200 hover:text-white transition font-semibold"
+                className={`text-gray-200 hover:text-white transition font-semibold  ${
+                  pathname === '/contact' ? 'text-primary font-bold' : ''
+                }`}
               >
                 Contact Us
               </Link>
             </div>
             <Link
               href="/shop"
-              className="ml-auto text-gray-200 hover:text-white transition font-semibold"
+              className={`text-gray-200 hover:text-white transition font-semibold  ${
+                pathname === '/shop' ? 'text-primary font-bold' : ''
+              }`}
             >
               Login/Register
             </Link>

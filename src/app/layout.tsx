@@ -2,9 +2,10 @@ import type { Metadata } from 'next'
 import './globals.css'
 import '@fortawesome/fontawesome-svg-core/styles.css'
 import { config } from '@fortawesome/fontawesome-svg-core'
-import { poppins, roboto, rubik } from './fonts'
+import { poppins } from './fonts'
 import Header from '@/components/header/Header'
 import NavBar from '@/components/navbar/NavBar'
+import SiteFooter from '@/components/footer/SiteFooter'
 config.autoAddCss = false
 
 export const metadata: Metadata = {
@@ -23,6 +24,7 @@ export default function RootLayout({
         <Header />
         <NavBar />
         {children}
+        <SiteFooter />
       </body>
     </html>
   )
